@@ -1,0 +1,26 @@
+{
+  "name": "auto-fixer-backend",
+  "version": "1.0.0",
+  "description": "Auto Fixer is a platform that connects car owners with mechanics. This backend is built using **GraphQL** with **Apollo Server**, **Node.js**, and **MongoDB**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirajahmedx/auto-fixer-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirajahmedx/auto-fixer-backend/issues"
+  },
+  "homepage": "https://github.com/sirajahmedx/auto-fixer-backend#readme",
+  "dependencies": {
+    "apollo": "^2.34.0",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7"
+  }
+}
