@@ -3,6 +3,12 @@ const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 dotenv.config();
+const { expressMiddleware } = require("@apollo/server/express4");
+const {
+   createApolloGraphqlServer,
+   context,
+} = require("./backend/graphqlServer");rs
+
 const init = async () => {
    try {
       const app = express();
@@ -29,7 +35,10 @@ const init = async () => {
       app.get("/", (req, res) => {
          res.json({ message: "Server is up and running" });
       });
-
+      app.use(
+         "/graphql",
+         expressMiddleware(await createApolloGraphqlServer(), context)
+      );
       app.listen(8000, () => console.log("Server started on port 8000"));
    } catch (err) {
       console.error("Error during initialization", err);
