@@ -1,9 +1,10 @@
 const mutations = `#graphql
   createUser(
-    fullName: String,
+    username: String!,
+    fullName: String!,
     email: String,
-    password: String,
-    phone: String,
+    password: String!,
+    phone: String!,
     bio: String,
     avatar: String,
     cnic: String,
@@ -57,7 +58,9 @@ const mutations = `#graphql
 
   verifyUser(phone: String!, email: String, otp: String!): TokenResponse
 
-  resendVerificationEmail(email: String, phone: String): Response
+  resendVerificationPhone(phone: String!): Response
+
+  resendVerificationEmail(email: String!,): Response
 
   forgotPassword(email: String, phone: String): Response
 

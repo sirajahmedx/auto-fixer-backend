@@ -21,6 +21,7 @@ const ratingSchema = new Schema({
 
 const userSchema = new Schema(
    {
+      username: { type: String, maxLength: 50 },
       full_name: { type: String, maxLength: 50 },
       email: {
          type: String,
